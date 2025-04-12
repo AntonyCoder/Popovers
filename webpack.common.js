@@ -26,10 +26,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [MiniCssExtractPlugin.loader, "css-loader"],
-      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
@@ -48,11 +44,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: 'src/img', to: 'img'},
-      ],
     }),
   ],
 };
